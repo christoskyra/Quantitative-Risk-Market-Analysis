@@ -34,7 +34,7 @@ for t in range(1, N + 1):
     diffusion = sigma * np.sqrt(dt) * Z[:, t-1]
     S[:, t] = S[:, t-1] * np.exp(drift + diffusion)
 
-# 4. Visualization: "Spaghetti Plot"
+# 4. Visualization:
 plt.figure(figsize=(10, 6))
 plt.plot(S.T, alpha=0.1, color='#1f77b4') # Set transparency to see density
 plt.plot(S.T[:, 0], color='red', linewidth=2, label='Initial Price')
